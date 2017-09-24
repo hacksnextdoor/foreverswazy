@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchMockUser } from '../actions'
+import YouTube from 'react-youtube';
+import { fetchMockUser } from '../actions';
+import img from '../../assets/$@2x.png'
+
 
 /*
   connect(a,b)
@@ -22,11 +25,22 @@ export default class App extends React.Component {
 
   render() {
     const { user, rides } = this.props
+    const opts = {
+      height: '600',
+      width: '100%',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0,
+        controls: 0
+      },
+
+    }
     return (
      <div style={{textAlign: 'center'}}>
-        <h1>Hello</h1>
-        <h3>Current User</h3>
-        <div>{JSON.stringify(user)}</div>
+       <img src={img} height={50} width={50} style={{paddingBottom: 10}}/>
+       <YouTube
+         videoId={'j1gD-AlTevY'}
+         opts={opts}
+       />
       </div>
     );
   }
