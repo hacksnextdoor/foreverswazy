@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import YouTube from 'react-youtube';
 import { fetchMockUser } from '../actions';
-import img from '../../assets/$@2x.png'
+import Twitter from '../../assets/Twitter.png'
+import Instagram from '../../assets/Instagram.png'
 
 
 /*
@@ -36,11 +37,19 @@ export default class App extends React.Component {
     }
     return (
      <div style={{textAlign: 'center'}}>
-       <img src={img} height={50} width={50} style={{paddingBottom: 10}}/>
+       <div style={{fontFamily: 'Helvetica', fontSize:32, padding: '25px 0px', fontWeight:'bold'}}>
+         foreverswazy.com
+       </div>
        <YouTube
          videoId={'j1gD-AlTevY'}
          opts={opts}
        />
+       <div style={{padding:'25px 0px'}}>
+         <img style={{marginRight:40, height:35}} src={Twitter} href={''}></img>
+         <a href={'https://www.instagram.com/shillaswazy/'}>
+           <img style={{marginLeft:40, height:40}} src={Instagram} href={'https://www.instagram.com/shillaswazy/'}></img>
+         </a>
+       </div>
       </div>
     );
   }
