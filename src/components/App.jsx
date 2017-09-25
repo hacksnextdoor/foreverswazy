@@ -48,7 +48,9 @@ export default class App extends React.Component {
          <source src={MV} type={'video/mp4'} />
        </video> */}
        <div style={{padding:'25px 0px'}}>
-         <img style={{marginRight:40, height:35}} src={Twitter} href={'https://twitter.com/ShillaSwazy'}></img>
+         <a href={'https://twitter.com/ShillaSwazy'}>
+          <img style={{marginRight:40, height:35}} src={Twitter} href={''}></img>
+         </a>
          <a href={'https://www.instagram.com/shillaswazy/'}>
            <img style={{marginLeft:40, height:40}} src={Instagram} href={'https://www.instagram.com/shillaswazy/'}></img>
          </a>
